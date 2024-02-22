@@ -8,15 +8,16 @@ public class Movie {
     private double lengthMinute;
     private String genre;
 
-    //Constructor
+    //Constructor (initialize object)
     public Movie(String titel, String director, int yearCreated, boolean isInColor, double lengthMinute, String genre) {
-            this.titel = titel;
-            this.director = director;
-            this.yearCreated = yearCreated;
-            this.isInColor = isInColor;
-            this.lengthMinute = lengthMinute;
-            this.genre = genre;
-        }
+        this.titel = titel;
+        this.director = director;
+        this.yearCreated = yearCreated;
+        this.isInColor = isInColor;
+        this.lengthMinute = lengthMinute;
+        this.genre = genre;
+    }
+
 
     //Get Metoder
     public String getTitel() {
@@ -34,15 +35,15 @@ public class Movie {
     // Det er ikke defineret at isInColor er true hvis input fra bruger er enten 'ja' eller 'nej', hvordan?
     public boolean getIsInColor() {
         return isInColor;
-        }
     }
 
     public double getLengthMinute() {
         return lengthMinute;
     }
 
+
     public String getGenre() {
       return genre;
     }
-
 }
+

@@ -1,15 +1,26 @@
 public class MovieCollection {
 
-   //Movie[] movieList = new Movie[5];
-   //int count= 0;
+   //Array objekt
+   private final Movie[] collection;
 
-//   public Movie getMovieList() {
-//       return movieList;
+   //attributes
+   int count = 0;
+
+   //Constructor
+    public MovieCollection(int size) {
+       collection = new Movie[size];
+       count++;
    }
 
-//   public addMovie(String titel) {
-//       movieList[count++] = new Movie();
-//   }
+  //Methods
+    public void addMovie (String titel, String director, int yearCreated, boolean isInColor, double lengthMinute, String genre) {
+        if (count > collection.length) {
+            collection[count++] = new Movie(titel,director, yearCreated, isInColor, lengthMinute, genre);
+            System.out.println("Film tilføjet");
+        } else {
+            System.out.println("Fejl i tilføjelse. Bibilioteket er fyldt");
+        }
+    }
 
-    //}
+}
 
