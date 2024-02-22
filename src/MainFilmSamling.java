@@ -11,7 +11,8 @@ public class MainFilmSamling {
 
     Scanner scannerInput = new Scanner(System.in);
         //Objekt
-        MovieCollection mc = new MovieCollection(5);
+        Controller controller = new Controller();
+
         System.out.println("Velkommen til din Film Samling");
 
     while (true) {
@@ -50,6 +51,8 @@ public class MainFilmSamling {
             String genre = scannerInput.nextLine();
             System.out.println("Filmen er nu tilføjet");
             System.out.println("");
+
+
         } else if (valg == 2) {
             System.out.println("Afslutter program");
             break;
