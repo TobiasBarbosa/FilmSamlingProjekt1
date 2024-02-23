@@ -8,6 +8,7 @@ public class Movie {
     private double lengthMinute;
     private String genre;
 
+
     //Constructor (initialize object)
     public Movie(String titel, String director, int yearCreated, boolean isInColor, double lengthMinute, String genre) {
         this.titel = titel;
@@ -17,7 +18,6 @@ public class Movie {
         this.lengthMinute = lengthMinute;
         this.genre = genre;
     }
-
 
     //Get Metoder
     public String getTitel() {
@@ -45,5 +45,19 @@ public class Movie {
     public String getGenre() {
       return genre;
     }
+
+    //Override metode // Forstår ikke hvad jeg gør, problemmer med at kalde...
+      @Override
+      public String toString(){
+        String result = "";
+        result += titel + " " + director + " " + yearCreated;
+        if (isInColor == true) {
+            result += " er i farve";
+        } else {
+            result += " er ikke i farve";
+        }
+        result += lengthMinute + " " + genre;
+        return result;
+     }
 }
 
